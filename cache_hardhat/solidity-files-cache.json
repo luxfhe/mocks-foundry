@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/ACL.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/ACL.sol": {
       "lastModificationDate": 1742339953681,
       "contentHash": "c3d5d15c9e7543c6d79cd9387fcc1cb0",
       "sourceName": "src/ACL.sol",
@@ -43,7 +43,7 @@
         "ACL"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/addresses/TaskManagerAddress.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/addresses/TaskManagerAddress.sol": {
       "lastModificationDate": 1742301819697,
       "contentHash": "4c6b6b89d0f09d3b2444a69b5cb9c6b0",
       "sourceName": "src/addresses/TaskManagerAddress.sol",
@@ -72,14 +72,14 @@
         }
       },
       "imports": [
-        "@fhenixprotocol/cofhe-contracts/FHE.sol"
+        "@luxfheprotocol/cofhe-contracts/FHE.sol"
       ],
       "versionPragmas": [
         "^0.8.24"
       ],
       "artifacts": []
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/Permissioned.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/Permissioned.sol": {
       "lastModificationDate": 1741943008242,
       "contentHash": "291bbf84623e10ff4822ce39967f2c47",
       "sourceName": "src/Permissioned.sol",
@@ -121,7 +121,7 @@
         "PermissionedUpgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol": {
       "lastModificationDate": 1742301427155,
       "contentHash": "c14401b3899fa52b32a4cb2a1bd22126",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol",
@@ -160,7 +160,7 @@
         "Ownable2StepUpgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1742288977449,
       "contentHash": "a55fef2557b35bac18a1880d3c2e6740",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
@@ -200,7 +200,7 @@
         "Strings"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
       "lastModificationDate": 1742301427156,
       "contentHash": "ac3b77dea52cfdb14498e0a306a34b01",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
@@ -240,10 +240,10 @@
         "UUPSUpgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@fhenixprotocol+cofhe-contracts@0.0.13/node_modules/@fhenixprotocol/cofhe-contracts/FHE.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@luxfheprotocol+cofhe-contracts@0.0.13/node_modules/@luxfheprotocol/cofhe-contracts/FHE.sol": {
       "lastModificationDate": 1742341049576,
       "contentHash": "9280a22efc0231cf27d2b6eb3100f716",
-      "sourceName": "@fhenixprotocol/cofhe-contracts/FHE.sol",
+      "sourceName": "@luxfheprotocol/cofhe-contracts/FHE.sol",
       "solcConfig": {
         "version": "0.8.28",
         "settings": {
@@ -289,10 +289,10 @@
         "Impl"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@fhenixprotocol+cofhe-contracts@0.0.13/node_modules/@fhenixprotocol/cofhe-contracts/ICofhe.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@luxfheprotocol+cofhe-contracts@0.0.13/node_modules/@luxfheprotocol/cofhe-contracts/ICofhe.sol": {
       "lastModificationDate": 1742301728252,
       "contentHash": "10d87f17b894e4c5a461729e20e2dad1",
-      "sourceName": "@fhenixprotocol/cofhe-contracts/ICofhe.sol",
+      "sourceName": "@luxfheprotocol/cofhe-contracts/ICofhe.sol",
       "solcConfig": {
         "version": "0.8.28",
         "settings": {
@@ -326,7 +326,7 @@
         "Utils"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
       "lastModificationDate": 1742288977446,
       "contentHash": "2b2665ae9bdb1af440658741a77fe213",
       "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
@@ -365,7 +365,7 @@
         "Math"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
       "lastModificationDate": 1742288977449,
       "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
       "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
@@ -403,7 +403,7 @@
         "SignedMath"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
       "lastModificationDate": 1742288977448,
       "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
       "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
@@ -439,7 +439,7 @@
         "SafeCast"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
       "lastModificationDate": 1742288977448,
       "contentHash": "2133dc13536b4a6a98131e431fac59e1",
       "sourceName": "@openzeppelin/contracts/utils/Panic.sol",
@@ -475,7 +475,7 @@
         "Panic"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
       "lastModificationDate": 1742347374445,
       "contentHash": "e6c1e5a523dc3be4727bdfa456303d7b",
       "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
@@ -511,7 +511,7 @@
         "Initializable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
       "lastModificationDate": 1742301427151,
       "contentHash": "51cc835f47cc5ee0d4b8017daef6e0ab",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol",
@@ -551,7 +551,7 @@
         "EIP712Upgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol": {
       "lastModificationDate": 1742288977449,
       "contentHash": "03f092e4e7befa45c08cfa35b51016cb",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol",
@@ -590,7 +590,7 @@
         "SignatureChecker"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
       "lastModificationDate": 1742288977447,
       "contentHash": "86fd93657e4e27ff76c38699e9b9fcef",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
@@ -628,7 +628,7 @@
         "MessageHashUtils"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
       "lastModificationDate": 1742288977444,
       "contentHash": "94364524cb1a39dcbc3d3afff6d8e53e",
       "sourceName": "@openzeppelin/contracts/interfaces/IERC5267.sol",
@@ -664,7 +664,7 @@
         "IERC5267"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
       "lastModificationDate": 1742288977423,
       "contentHash": "81de029d56aa803972be03c5d277cb6c",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
@@ -700,7 +700,7 @@
         "ECDSA"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC1271.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC1271.sol": {
       "lastModificationDate": 1742288977441,
       "contentHash": "f8b3eec87e333cafeddb1310bd264f54",
       "sourceName": "@openzeppelin/contracts/interfaces/IERC1271.sol",
@@ -736,7 +736,7 @@
         "IERC1271"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
       "lastModificationDate": 1742301427155,
       "contentHash": "77d30f3cd93f46b80b6f8f1ebc574ee4",
       "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
@@ -775,7 +775,7 @@
         "OwnableUpgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@5.2.0_@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
       "lastModificationDate": 1742301427150,
       "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
       "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
@@ -813,7 +813,7 @@
         "ContextUpgradeable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
       "lastModificationDate": 1742288977422,
       "contentHash": "64a2b7a96950f0641c477993f3029477",
       "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
@@ -849,7 +849,7 @@
         "IERC1822Proxiable"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol": {
       "lastModificationDate": 1742288977427,
       "contentHash": "c023a5b23ee35b40b3085e550ff3367f",
       "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol",
@@ -890,7 +890,7 @@
         "ERC1967Utils"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
       "lastModificationDate": 1742288977449,
       "contentHash": "e656d64c4ce918f3d13030b91c935134",
       "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
@@ -926,7 +926,7 @@
         "StorageSlot"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
       "lastModificationDate": 1742288977442,
       "contentHash": "4e17c826a54a8ee1a185449d4695d07d",
       "sourceName": "@openzeppelin/contracts/interfaces/IERC1967.sol",
@@ -962,7 +962,7 @@
         "IERC1967"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
       "lastModificationDate": 1742288977440,
       "contentHash": "0a5c323fd908535580597848b8e550fb",
       "sourceName": "@openzeppelin/contracts/proxy/beacon/IBeacon.sol",
@@ -998,7 +998,7 @@
         "IBeacon"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1742288977420,
       "contentHash": "5b9a49c25d7edbc48ffcbd2c7e8a40ef",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
@@ -1036,7 +1036,7 @@
         "Address"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Errors.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/utils/Errors.sol": {
       "lastModificationDate": 1742288977433,
       "contentHash": "6b5eac2b85500c3012977849cfd633d8",
       "sourceName": "@openzeppelin/contracts/utils/Errors.sol",
@@ -1072,7 +1072,7 @@
         "Errors"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/MockTaskManager.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/MockTaskManager.sol": {
       "lastModificationDate": 1742377613526,
       "contentHash": "bda283d7c17180359246833e2a75f10e",
       "sourceName": "src/MockTaskManager.sol",
@@ -1108,7 +1108,7 @@
         "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
         "./MockCoFHE.sol",
-        "@fhenixprotocol/cofhe-contracts/ICofhe.sol"
+        "@luxfheprotocol/cofhe-contracts/ICofhe.sol"
       ],
       "versionPragmas": [
         ">=0.8.25 <0.9.0"
@@ -1118,7 +1118,7 @@
         "TaskManager"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/MockCoFHE.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/MockCoFHE.sol": {
       "lastModificationDate": 1742342014020,
       "contentHash": "229d20fd49b2d0abae3d0ad0ce6440b0",
       "sourceName": "src/MockCoFHE.sol",
@@ -1151,7 +1151,7 @@
         "@openzeppelin/contracts/utils/Strings.sol",
         "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
         "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
-        "@fhenixprotocol/cofhe-contracts/FHE.sol"
+        "@luxfheprotocol/cofhe-contracts/FHE.sol"
       ],
       "versionPragmas": [
         ">=0.8.25 <0.9.0"
@@ -1160,7 +1160,7 @@
         "MockCoFHE"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/console.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/console.sol": {
       "lastModificationDate": 1742301645082,
       "contentHash": "ce19a9e49945b42118379ff99d853c05",
       "sourceName": "forge-std/console.sol",
@@ -1196,7 +1196,7 @@
         "console"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/MockZkVerifier.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/MockZkVerifier.sol": {
       "lastModificationDate": 1742374790656,
       "contentHash": "4df40d16e125c76229c344b05b68ef5d",
       "sourceName": "src/MockZkVerifier.sol",
@@ -1225,7 +1225,7 @@
         }
       },
       "imports": [
-        "@fhenixprotocol/cofhe-contracts/FHE.sol",
+        "@luxfheprotocol/cofhe-contracts/FHE.sol",
         "./MockCoFHE.sol",
         "./MockTaskManager.sol"
       ],
@@ -1236,7 +1236,7 @@
         "MockZkVerifier"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol": {
       "lastModificationDate": 1742288977427,
       "contentHash": "07e13052976ae13746455b10ebf3cff9",
       "sourceName": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol",
@@ -1275,7 +1275,7 @@
         "ERC1967Proxy"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/Proxy.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/@openzeppelin+contracts@5.2.0/node_modules/@openzeppelin/contracts/proxy/Proxy.sol": {
       "lastModificationDate": 1742288977448,
       "contentHash": "35308c2fa7be99a959494c37e8257c16",
       "sourceName": "@openzeppelin/contracts/proxy/Proxy.sol",
@@ -1311,7 +1311,7 @@
         "Proxy"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/CoFheTest.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/CoFheTest.sol": {
       "lastModificationDate": 1742392095700,
       "contentHash": "47d301b8acaad72b7dfe7f4037e369ae",
       "sourceName": "src/CoFheTest.sol",
@@ -1343,7 +1343,7 @@
         "forge-std/Test.sol",
         "./MockTaskManager.sol",
         "./ACL.sol",
-        "@fhenixprotocol/cofhe-contracts/FHE.sol",
+        "@luxfheprotocol/cofhe-contracts/FHE.sol",
         "./MockZkVerifier.sol",
         "./MockZkVerifierSigner.sol",
         "./addresses/ZkVerifierAddress.sol",
@@ -1361,7 +1361,7 @@
         "CoFheTest"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/MockZkVerifierSigner.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/MockZkVerifierSigner.sol": {
       "lastModificationDate": 1742341543672,
       "contentHash": "a906356f03608094e1746ca5bc3c1700",
       "sourceName": "src/MockZkVerifierSigner.sol",
@@ -1402,7 +1402,7 @@
         "MockZkVerifierSigner"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/addresses/ZkVerifierAddress.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/addresses/ZkVerifierAddress.sol": {
       "lastModificationDate": 1741861558997,
       "contentHash": "2b37a75b4d7afb34c491a2695f27541f",
       "sourceName": "src/addresses/ZkVerifierAddress.sol",
@@ -1436,7 +1436,7 @@
       ],
       "artifacts": []
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/MockQueryDecrypter.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/MockQueryDecrypter.sol": {
       "lastModificationDate": 1742819503580,
       "contentHash": "eb9c7378b6bd646ace48cd0ecb7fad72",
       "sourceName": "src/MockQueryDecrypter.sol",
@@ -1468,7 +1468,7 @@
         "./Permissioned.sol",
         "./ACL.sol",
         "./MockTaskManager.sol",
-        "@fhenixprotocol/cofhe-contracts/FHE.sol",
+        "@luxfheprotocol/cofhe-contracts/FHE.sol",
         "./Permissioned.sol"
       ],
       "versionPragmas": [
@@ -1478,7 +1478,7 @@
         "MockQueryDecrypter"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/addresses/QueryDecrypterAddress.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/addresses/QueryDecrypterAddress.sol": {
       "lastModificationDate": 1741620552582,
       "contentHash": "9ad7d66c7b60f273acf421b6fb01277e",
       "sourceName": "src/addresses/QueryDecrypterAddress.sol",
@@ -1512,7 +1512,7 @@
       ],
       "artifacts": []
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Test.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Test.sol": {
       "lastModificationDate": 1742301645085,
       "contentHash": "462f6d9c84257bc12355e8533c3bcc96",
       "sourceName": "forge-std/Test.sol",
@@ -1566,7 +1566,7 @@
         "Test"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdChains.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdChains.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "16ac62bd871644088110c16fdd686431",
       "sourceName": "forge-std/StdChains.sol",
@@ -1604,7 +1604,7 @@
         "StdChains"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdAssertions.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdAssertions.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "25b77f9806b64d497b8a46aeb8e5f6f0",
       "sourceName": "forge-std/StdAssertions.sol",
@@ -1642,7 +1642,7 @@
         "StdAssertions"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/console2.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/console2.sol": {
       "lastModificationDate": 1742301645082,
       "contentHash": "f65ad21034b111e70fb5342d5771efcd",
       "sourceName": "forge-std/console2.sol",
@@ -1678,7 +1678,7 @@
       ],
       "artifacts": []
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdConstants.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdConstants.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "14edb96ae3a9171cd6885d775e077b2b",
       "sourceName": "forge-std/StdConstants.sol",
@@ -1717,7 +1717,7 @@
         "StdConstants"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdStyle.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdStyle.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "6281165a12aa639705c691fccefd855e",
       "sourceName": "forge-std/StdStyle.sol",
@@ -1755,7 +1755,7 @@
         "StdStyle"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdStorage.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdStorage.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "ce68f6e336944f16d31351a47d0b19b8",
       "sourceName": "forge-std/StdStorage.sol",
@@ -1794,7 +1794,7 @@
         "stdStorageSafe"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdMath.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdMath.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
       "sourceName": "forge-std/StdMath.sol",
@@ -1830,7 +1830,7 @@
         "stdMath"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdCheats.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdCheats.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "88408106c41697153142f6a6eeb06728",
       "sourceName": "forge-std/StdCheats.sol",
@@ -1871,7 +1871,7 @@
         "StdCheatsSafe"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdJson.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdJson.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "02209da5708eaee03e24a9c24a687370",
       "sourceName": "forge-std/StdJson.sol",
@@ -1909,7 +1909,7 @@
         "stdJson"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Base.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Base.sol": {
       "lastModificationDate": 1742301645082,
       "contentHash": "26ab04949780bbaec40dfa66ddea6aac",
       "sourceName": "forge-std/Base.sol",
@@ -1950,7 +1950,7 @@
         "TestBase"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdToml.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdToml.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "4bce85a4c60f2c073e651ee8140bcb4d",
       "sourceName": "forge-std/StdToml.sol",
@@ -1988,7 +1988,7 @@
         "stdToml"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Vm.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/Vm.sol": {
       "lastModificationDate": 1742301645085,
       "contentHash": "96e14164f19bc51b0aff863087896678",
       "sourceName": "forge-std/Vm.sol",
@@ -2025,7 +2025,7 @@
         "VmSafe"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdError.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdError.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "64c896e1276a291776e5ea5aecb3870a",
       "sourceName": "forge-std/StdError.sol",
@@ -2061,7 +2061,7 @@
         "stdError"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdInvariant.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdInvariant.sol": {
       "lastModificationDate": 1742301645084,
       "contentHash": "f16837d0e7cb829544ae1f1319ea7643",
       "sourceName": "forge-std/StdInvariant.sol",
@@ -2097,7 +2097,7 @@
         "StdInvariant"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdUtils.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/StdUtils.sol": {
       "lastModificationDate": 1742301645085,
       "contentHash": "4c104fcdec12d3b28348ff9e32c1e4eb",
       "sourceName": "forge-std/StdUtils.sol",
@@ -2136,7 +2136,7 @@
         "StdUtils"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/safeconsole.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/safeconsole.sol": {
       "lastModificationDate": 1742301645083,
       "contentHash": "1445aa2f47000e212173e0cefd6c7a77",
       "sourceName": "forge-std/safeconsole.sol",
@@ -2172,7 +2172,7 @@
         "safeconsole"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/interfaces/IMulticall3.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/node_modules/.pnpm/forge-std@https+++codeload.github.com+foundry-rs+forge-std+tar.gz+8ba9031ffcbe25aa0d1224d3ca263a995026e477/node_modules/forge-std/src/interfaces/IMulticall3.sol": {
       "lastModificationDate": 1742301645083,
       "contentHash": "7b131ca1ca32ef6378b7b9ad5488b901",
       "sourceName": "forge-std/interfaces/IMulticall3.sol",
@@ -2208,7 +2208,7 @@
         "IMulticall3"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/ICofhe.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/ICofhe.sol": {
       "lastModificationDate": 1742301826994,
       "contentHash": "8ab5ef8e0f6966bb6cdfe2b7a2b79e20",
       "sourceName": "src/ICofhe.sol",
@@ -2247,7 +2247,7 @@
         "Utils"
       ]
     },
-    "/Users/roguerotkosky/Fhenix/Development/cofhe-foundry-mocks/src/Example.sol": {
+    "/Users/roguerotkosky/luxfhe/Development/cofhe-foundry-mocks/src/Example.sol": {
       "lastModificationDate": 1742395343933,
       "contentHash": "ac2a329ca37fced327b965962278a85b",
       "sourceName": "src/Example.sol",
@@ -2276,7 +2276,7 @@
         }
       },
       "imports": [
-        "@fhenixprotocol/cofhe-contracts/FHE.sol"
+        "@luxfheprotocol/cofhe-contracts/FHE.sol"
       ],
       "versionPragmas": [
         "^0.8.13"

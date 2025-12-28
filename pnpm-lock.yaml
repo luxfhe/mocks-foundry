@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@fhenixprotocol/cofhe-contracts':
+      '@luxfheprotocol/cofhe-contracts':
         specifier: 0.0.13
         version: 0.0.13
       '@openzeppelin/contracts':
@@ -155,7 +155,7 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@fhenixprotocol/cofhe-contracts@0.0.13':
+  '@luxfheprotocol/cofhe-contracts@0.0.13':
     resolution: {integrity: sha512-+lHo5v52fR7QfQj2ottDw4F/AqZg6obPBRqvK576SJatX3o4aH6ZSt2kxNb5kT8Ckthjw6FoNmLdUVCDpP400w==}
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -2390,7 +2390,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@fhenixprotocol/cofhe-contracts@0.0.13':
+  '@luxfheprotocol/cofhe-contracts@0.0.13':
     dependencies:
       '@openzeppelin/contracts': 5.2.0
 

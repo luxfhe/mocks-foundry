@@ -6,7 +6,7 @@ pragma solidity >=0.8.19 <0.9.0;
 import {Permission} from "./Permissioned.sol";
 import {ACL} from "./ACL.sol";
 import {TaskManager} from "./MockTaskManager.sol";
-import {TASK_MANAGER_ADDRESS} from "@fhenixprotocol/cofhe-contracts/FHE.sol";
+import {TASK_MANAGER_ADDRESS} from "@luxfhe/cofhe-contracts/FHE.sol";
 import {PermissionedUpgradeable} from "./Permissioned.sol";
 
 contract MockQueryDecrypter {
