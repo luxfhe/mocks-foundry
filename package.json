@@ -1,0 +1,50 @@
+{
+	"name": "@fhenixprotocol/cofhe-foundry-mocks",
+	"description": "Utility contracts for locally testing CoFHE with FHE primitives locally in foundry.",
+	"version": "0.1.3",
+	"author": {
+		"name": "FhenixProtocol",
+		"url": "https://github.com/FhenixProtocol/cofhe-foundry-mocks"
+	},
+	"scripts": {
+		"test": "forge test -vvv",
+		"anvil": "anvil --code-size-limit 100000",
+		"anvil-with-mocks": "anvil --code-size-limit 100000 & npx hardhat deploy-mocks-on-anvil --network anvil",
+		"deploy-mocks": "npx hardhat deploy-mocks-on-anvil --network anvil",
+		"check-mocks": "npx hardhat check-mocks-on-anvil --network anvil"
+	},
+	"license": "MIT",
+	"files": [
+		"src/",
+		"tasks/"
+	],
+	"keywords": [
+		"blockchain",
+		"ethereum",
+		"smart-contracts",
+		"solidity",
+		"FHE",
+		"encryption",
+		"privacy",
+		"coprocessor",
+		"fhenix",
+		"cofhe"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@openzeppelin/contracts": "^5.0.0",
+		"@openzeppelin/contracts-upgradeable": "^5.0.0",
+		"@fhenixprotocol/cofhe-contracts": "0.0.13",
+		"forge-std": "github:foundry-rs/forge-std"
+	},
+	"devDependencies": {
+		"axios": "^1.8.3",
+		"@nomicfoundation/hardhat-ethers": "^3.0.8",
+		"@nomicfoundation/hardhat-foundry": "^1.1.3",
+		"@nomicfoundation/hardhat-toolbox": "^5.0.0",
+		"ethers": "^6.13.5",
+		"hardhat": "^2.22.19"
+	}
+}
