@@ -1,7 +1,7 @@
 {
 	"name": "@luxfhe/mock-contracts",
 	"description": "Utility contracts for locally testing LuxFHE with FHE primitives in foundry.",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"author": {
 		"name": "Lux Industries Inc",
 		"url": "https://luxfhe.io"
