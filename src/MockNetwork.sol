@@ -9,8 +9,9 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
 import {Ownable2StepUpgradeable} from "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol";
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import {MockCoFHE} from "./MockCoFHE.sol";
-import {ITaskManager, FunctionId, Utils, EncryptedInput} from "@luxfhe/cofhe-contracts/ICofhe.sol";
+import {MockLuxFHE} from "./MockLuxFHE.sol";
+import {FunctionId, Utils, EncryptedInput} from "@luxfi/contracts/fhe/IFHE.sol";
+import {IFHENetwork} from "./interfaces/IFHENetwork.sol";
 
 error DecryptionResultNotReady(uint256 ctHash);
 // Input validation errors
@@ -177,7 +178,7 @@ library TMCommon {
     }
 }
 
-contract TaskManager is ITaskManager, MockCoFHE {
+contract MockNetwork is IFHENetwork, MockLuxFHE {
     address owner;
     bool private initialized;
 

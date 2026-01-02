@@ -3,8 +3,8 @@ pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
 import {ExampleFHECounter} from "./ExampleFHECounter.sol";
-import {CoFheTest} from "../src/CoFheTest.sol";
-import "@luxfhe/cofhe-contracts/FHE.sol";
+import {FHETest} from "../src/FHETest.sol";
+import "@luxfi/contracts/fhe/FHE.sol";
 import {PermissionedUpgradeable, Permission, PermissionUtils} from "../src/Permissioned.sol";
 
 interface IIsAllowedWithPermission {
@@ -21,14 +21,14 @@ contract QueryDecryptExample {
         return balances[account];
     }
 
-    function setBalance(InEuint32 memory inAmount) public {
+    function setBalance(Euint32 memory inAmount) public {
         balances[msg.sender] = FHE.asEuint32(inAmount);
         FHE.allow(balances[msg.sender], msg.sender);
     }
 }
 
 contract QueryDecryptTest is Test {
-    CoFheTest CFT;
+    FHETest FHT;
 
     QueryDecryptExample public example;
 
@@ -39,7 +39,7 @@ contract QueryDecryptTest is Test {
     address alice;
 
     function setUp() public {
-        CFT = new CoFheTest(false);
+        FHT = new FHETest(false);
 
         example = new QueryDecryptExample();
 
@@ -51,17 +51,17 @@ contract QueryDecryptTest is Test {
     }
 
     function test_getBalance_queryDecrypt_self() public {
-        InEuint32 memory inAmount = CFT.createInEuint32(100, bob);
+        Euint32 memory inAmount = FHT.createEuint32(100, bob);
 
         vm.prank(bob);
         example.setBalance(inAmount);
 
         euint32 result = example.getBalance(bob);
 
-        Permission memory permission = CFT.createPermissionSelf(bob);
-        permission = CFT.signPermissionSelf(permission, bobPKey);
+        Permission memory permission = FHT.createPermissionSelf(bob);
+        permission = FHT.signPermissionSelf(permission, bobPKey);
 
-        (bool allowed, string memory error, uint256 decrypted) = CFT
+        (bool allowed, string memory error, uint256 decrypted) = FHT
             .queryDecrypt(euint32.unwrap(result), block.chainid, permission);
         assertEq(decrypted, 100);
         assertEq(allowed, true);
@@ -69,18 +69,18 @@ contract QueryDecryptTest is Test {
     }
 
     function test_getBalance_queryDecrypt_shared() public {
-        InEuint32 memory inAmount = CFT.createInEuint32(100, bob);
+        Euint32 memory inAmount = FHT.createEuint32(100, bob);
 
         vm.prank(bob);
         example.setBalance(inAmount);
 
         euint32 result = example.getBalance(bob);
 
-        Permission memory permission = CFT.createPermissionShared(bob, alice);
-        permission = CFT.signPermissionShared(permission, bobPKey);
-        permission = CFT.signPermissionRecipient(permission, alicePKey);
+        Permission memory permission = FHT.createPermissionShared(bob, alice);
+        permission = FHT.signPermissionShared(permission, bobPKey);
+        permission = FHT.signPermissionRecipient(permission, alicePKey);
 
-        (bool allowed, string memory error, uint256 decrypted) = CFT
+        (bool allowed, string memory error, uint256 decrypted) = FHT
             .queryDecrypt(euint32.unwrap(result), block.chainid, permission);
         assertEq(decrypted, 100);
         assertEq(allowed, true);
@@ -88,29 +88,29 @@ contract QueryDecryptTest is Test {
     }
 
     function test_getBalance_querySealOutput() public {
-        InEuint32 memory inAmount = CFT.createInEuint32(100, bob);
+        Euint32 memory inAmount = FHT.createEuint32(100, bob);
 
         vm.prank(bob);
         example.setBalance(inAmount);
 
         euint32 result = example.getBalance(bob);
 
-        Permission memory permission = CFT.createPermissionSelf(bob);
-        bytes32 sealingKey = CFT.createSealingKey(bobPKey);
+        Permission memory permission = FHT.createPermissionSelf(bob);
+        bytes32 sealingKey = FHT.createSealingKey(bobPKey);
         permission.sealingKey = sealingKey;
-        permission = CFT.signPermissionSelf(permission, bobPKey);
+        permission = FHT.signPermissionSelf(permission, bobPKey);
 
-        (bool allowed, string memory error, bytes32 sealedOutput) = CFT
+        (bool allowed, string memory error, bytes32 sealedOutput) = FHT
             .querySealOutput(euint32.unwrap(result), block.chainid, permission);
 
         assertEq(allowed, true);
         assertEq(error, "");
-        uint256 unsealed = CFT.unseal(sealedOutput, sealingKey);
+        uint256 unsealed = FHT.unseal(sealedOutput, sealingKey);
         assertEq(unsealed, 100);
     }
 
     function test_getBalance_querySealOutput_reversions() public {
-        InEuint32 memory inAmount = CFT.createInEuint32(100, bob);
+        Euint32 memory inAmount = FHT.createEuint32(100, bob);
 
         vm.prank(bob);
         example.setBalance(inAmount);
@@ -119,13 +119,13 @@ contract QueryDecryptTest is Test {
 
         // IssuerSignature
 
-        Permission memory permission = CFT.createPermissionSelf(bob);
-        bytes32 sealingKey = CFT.createSealingKey(bobPKey);
+        Permission memory permission = FHT.createPermissionSelf(bob);
+        bytes32 sealingKey = FHT.createSealingKey(bobPKey);
         permission.sealingKey = sealingKey;
-        permission = CFT.signPermissionSelf(permission, bobPKey);
+        permission = FHT.signPermissionSelf(permission, bobPKey);
         permission.expiration = 10000;
 
-        (bool allowed, string memory error, ) = CFT.querySealOutput(
+        (bool allowed, string memory error, ) = FHT.querySealOutput(
             euint32.unwrap(result),
             block.chainid,
             permission
@@ -136,13 +136,13 @@ contract QueryDecryptTest is Test {
 
         // Expired
 
-        permission = CFT.createPermissionSelf(bob);
-        sealingKey = CFT.createSealingKey(bobPKey);
+        permission = FHT.createPermissionSelf(bob);
+        sealingKey = FHT.createSealingKey(bobPKey);
         permission.sealingKey = sealingKey;
         permission.expiration = uint64(block.timestamp - 1);
-        permission = CFT.signPermissionSelf(permission, bobPKey);
+        permission = FHT.signPermissionSelf(permission, bobPKey);
 
-        (allowed, error, ) = CFT.querySealOutput(
+        (allowed, error, ) = FHT.querySealOutput(
             euint32.unwrap(result),
             block.chainid,
             permission
@@ -156,11 +156,11 @@ contract QueryDecryptTest is Test {
     }
 
     function test_permission() public {
-        // Permission memory permission = CFT.createPermissionSelf(bob);
-        // bytes32 sealingKey = CFT.createSealingKey(bobPKey);
+        // Permission memory permission = FHT.createPermissionSelf(bob);
+        // bytes32 sealingKey = FHT.createSealingKey(bobPKey);
         // permission.sealingKey = sealingKey;
-        // permission = CFT.signPermissionSelf(permission, bobPKey);
-        // bool isAllowed = CFT.acl().isAllowedWithPermission(permission, 0);
+        // permission = FHT.signPermissionSelf(permission, bobPKey);
+        // bool isAllowed = FHT.acl().isAllowedWithPermission(permission, 0);
         // console.log("Is Allowed", isAllowed);
         // permission = Permission({
         //     issuer: 0x0376AAc07Ad725E01357B1725B5ceC61aE10473c,
@@ -172,11 +172,11 @@ contract QueryDecryptTest is Test {
         //     issuerSignature: hex"e0620e32f4e0900423ed3ae24becdf7a8c4e7f1eddc3b2341c632bec05023d97799ea8f2dfd5321c23b3bfc7777f9061fd9a10532577764c9f755ec34d89c2271c",
         //     recipientSignature: hex""
         // });
-        // isAllowed = CFT.acl().isAllowedWithPermission(permission, 0);
+        // isAllowed = FHT.acl().isAllowedWithPermission(permission, 0);
         // console.log("Is Allowed", isAllowed);
     }
 
-    function test_cofhejs_permission() public {
+    function test_luxfhejs_permission() public {
         // domain {
         //     name: 'ACL',
         //     version: '1',
@@ -204,7 +204,7 @@ contract QueryDecryptTest is Test {
         //     sealingKey: 0xf865839bb18600356eeb15aabb99ee115ad46d5d45d41e0ab1c662ee57715b13
         // });
         // euint32 amount = FHE.asEuint32(100);
-        // bool isAllowed2 = CFT.acl().isAllowedWithPermission(
+        // bool isAllowed2 = FHT.acl().isAllowedWithPermission(
         //     permission,
         //     euint32.unwrap(amount)
         // );
@@ -223,7 +223,7 @@ contract QueryDecryptTest is Test {
     //         recipientSignature: hex""
     //     });
 
-    //     bool isAllowed2 = CFT.acl().isAllowedWithPermission(permission2, 0);
+    //     bool isAllowed2 = FHT.acl().isAllowedWithPermission(permission2, 0);
     //     console.log("Is Allowed (Permission 2)", isAllowed2);
 
     //     Permission memory permission = Permission({
@@ -238,11 +238,11 @@ contract QueryDecryptTest is Test {
     //     });
 
     //     bytes32 issuerHash = PermissionUtils.issuerHash(permission);
-    //     bytes32 structHash = PermissionedUpgradeable(CFT.acl()).hashTypedDataV4(
+    //     bytes32 structHash = PermissionedUpgradeable(FHT.acl()).hashTypedDataV4(
     //         bytes32(0)
     //     );
 
-    //     bool isAllowed = CFT.acl().isAllowedWithPermission(permission, 0);
+    //     bool isAllowed = FHT.acl().isAllowedWithPermission(permission, 0);
 
     //     console.log("Is Allowed", isAllowed);
 
@@ -260,7 +260,7 @@ contract QueryDecryptTest is Test {
     //         address verifyingContract,
     //         bytes32 salt,
     //         uint256[] memory extensions
-    //     ) = PermissionedUpgradeable(CFT.acl()).eip712Domain();
+    //     ) = PermissionedUpgradeable(FHT.acl()).eip712Domain();
 
     //     console.log("Name", name);
     //     console.log("Version", version);

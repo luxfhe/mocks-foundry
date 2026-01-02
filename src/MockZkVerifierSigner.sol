@@ -4,7 +4,7 @@
 pragma solidity >=0.8.19 <0.9.0;
 
 import {console} from "forge-std/console.sol";
-import {SIGNER_PRIVATE_KEY, EncryptedInput} from "./MockCoFHE.sol";
+import {SIGNER_PRIVATE_KEY, EncryptedInput} from "./MockLuxFHE.sol";
 import {Test} from "forge-std/Test.sol";
 import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 

@@ -3,9 +3,9 @@
 
 pragma solidity >=0.8.19 <0.9.0;
 
-import {TASK_MANAGER_ADDRESS} from "@luxfhe/cofhe-contracts/FHE.sol";
-import {SIGNER_PRIVATE_KEY, EncryptedInput} from "./MockCoFHE.sol";
-import {TaskManager} from "./MockTaskManager.sol";
+import {FHE_NETWORK_ADDRESS} from "./addresses/FHENetworkAddress.sol";
+import {SIGNER_PRIVATE_KEY, EncryptedInput} from "./MockLuxFHE.sol";
+import {MockNetwork} from "./MockNetwork.sol";
 
 contract MockZkVerifier {
     // TMCommon
@@ -126,7 +126,7 @@ contract MockZkVerifier {
     }
 
     function insertCtHash(uint256 ctHash, uint256 value) public {
-        TaskManager(TASK_MANAGER_ADDRESS).MOCK_setInEuintKey(ctHash, value);
+        MockNetwork(FHE_NETWORK_ADDRESS).MOCK_setInEuintKey(ctHash, value);
         salt += 1;
     }
 

@@ -5,25 +5,25 @@ import {console} from "forge-std/console.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 import {ECDSA} from "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import "@luxfhe/cofhe-contracts/FHE.sol";
+import "@luxfi/contracts/fhe/FHE.sol";
 
 address constant SIGNER_ADDRESS = 0x6E12D8C87503D4287c294f2Fdef96ACd9DFf6bd2;
 uint256 constant SIGNER_PRIVATE_KEY = 49099792800763675079532137679706322989817545357788440619111868498148356080914;
 
 /**
- * @dev Mock implementation of the CoFHE contract, used to test FHE ops in isolation.
+ * @dev Mock implementation of the FHE contract, used to test FHE ops in isolation.
  * Is inherited by MockTaskManager.
  *
  * It is responsible for storing a map of ctHash -> value
  * and for performing the operations on the values.
  *
- * It is intended as a 1:1 drop-in replacement for the real CoFHE coprocessor, with the following differences:
+ * It is intended as a 1:1 drop-in replacement for the real FHE coprocessor, with the following differences:
  * - AsyncCallbacks are called synchronously (with a mock 1-10 second delay).
  * - Unencrypted values are available onchain via the `mockStorage` map.
  *
  * NOTE: This is not used in production
  */
-abstract contract MockCoFHE {
+abstract contract MockFHE {
     // Pulled from TMCommon
     uint256 constant uintTypeMask = (type(uint8).max >> 1); // 0x7f - 7 bits reserved for uint type in the one before last byte
     uint256 constant triviallyEncryptedMask = type(uint8).max - uintTypeMask; //0x80  1 bit reserved for isTriviallyEncrypted

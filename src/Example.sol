@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "@luxfhe/cofhe-contracts/FHE.sol";
+import "@luxfi/contracts/fhe/FHE.sol";
+import {Euint32} from "@luxfi/contracts/fhe/IFHE.sol";
 
 contract Example {
     euint32 public eNumber;
     uint256 public numberHash;
 
-    function setNumber(InEuint32 memory inNumber) public {
+    function setNumber(Euint32 memory inNumber) public {
         eNumber = FHE.asEuint32(inNumber);
         numberHash = euint32.unwrap(eNumber);
         FHE.allowThis(eNumber);
@@ -27,13 +28,13 @@ contract Example {
         FHE.allowSender(eNumber);
     }
 
-    function add(InEuint32 memory inNumber) public {
+    function add(Euint32 memory inNumber) public {
         eNumber = FHE.add(eNumber, FHE.asEuint32(inNumber));
         FHE.allowThis(eNumber);
         FHE.allowSender(eNumber);
     }
 
-    function sub(InEuint32 memory inNumber) public {
+    function sub(Euint32 memory inNumber) public {
         euint32 inAsEuint32 = FHE.asEuint32(inNumber);
         euint32 eSubOrZero = FHE.select(
             FHE.lte(inAsEuint32, eNumber),
@@ -45,7 +46,7 @@ contract Example {
         FHE.allowSender(eNumber);
     }
 
-    function mul(InEuint32 memory inNumber) public {
+    function mul(Euint32 memory inNumber) public {
         eNumber = FHE.mul(eNumber, FHE.asEuint32(inNumber));
         FHE.allowThis(eNumber);
         FHE.allowSender(eNumber);

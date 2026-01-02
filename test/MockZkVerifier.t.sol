@@ -2,21 +2,21 @@
 pragma solidity ^0.8.13;
 
 import {Test} from "forge-std/Test.sol";
-import {CoFheTest} from "../src/CoFheTest.sol";
-import {EncryptedInput} from "../src/MockCoFHE.sol";
-import "@luxfhe/cofhe-contracts/FHE.sol";
+import {FHETest} from "../src/FHETest.sol";
+import {EncryptedInput} from "../src/MockLuxFHE.sol";
+import "@luxfi/contracts/fhe/FHE.sol";
 
 contract MockZkVerifierTests is Test {
-    CoFheTest CFT;
+    FHETest FHT;
 
     function setUp() public {
-        CFT = new CoFheTest(false);
+        FHT = new FHETest(false);
     }
 
     function test_zkVerify() public {
         address sender = address(128);
 
-        EncryptedInput memory input = CFT.zkVerifier().zkVerify(
+        EncryptedInput memory input = FHT.zkVerifier().zkVerify(
             5,
             Utils.EUINT8_TFHE,
             sender,
@@ -24,13 +24,13 @@ contract MockZkVerifierTests is Test {
             block.chainid
         );
 
-        input = CFT.zkVerifierSigner().zkVerifySign(input, sender);
+        input = FHT.zkVerifierSigner().zkVerifySign(input, sender);
 
         // Hash should be in storage
-        CFT.assertHashValue(input.ctHash, 5);
+        FHT.assertHashValue(input.ctHash, 5);
 
         // Signature should be valid
-        CFT.taskManager().verifyInput(input, sender);
+        FHT.fheNetwork().verifyInput(input, sender);
     }
 
     function test_zkVerifyPacked() public {
@@ -44,7 +44,7 @@ contract MockZkVerifierTests is Test {
 
         address sender = address(128);
 
-        EncryptedInput[] memory inputs = CFT.zkVerifier().zkVerifyPacked(
+        EncryptedInput[] memory inputs = FHT.zkVerifier().zkVerifyPacked(
             values,
             utypes,
             sender,
@@ -52,14 +52,14 @@ contract MockZkVerifierTests is Test {
             block.chainid
         );
 
-        inputs = CFT.zkVerifierSigner().zkVerifySignPacked(inputs, sender);
+        inputs = FHT.zkVerifierSigner().zkVerifySignPacked(inputs, sender);
 
         // Hash should be in storage
-        CFT.assertHashValue(inputs[0].ctHash, 5);
-        CFT.assertHashValue(inputs[1].ctHash, 6);
+        FHT.assertHashValue(inputs[0].ctHash, 5);
+        FHT.assertHashValue(inputs[1].ctHash, 6);
 
-        CFT.taskManager().verifyInput(inputs[0], sender);
-        CFT.taskManager().verifyInput(inputs[1], sender);
+        FHT.fheNetwork().verifyInput(inputs[0], sender);
+        FHT.fheNetwork().verifyInput(inputs[1], sender);
     }
 
     function test_zkVerifier_as_mock() public {
@@ -73,7 +73,7 @@ contract MockZkVerifierTests is Test {
         values[0] = 5;
         values[1] = 6;
 
-        uint256[] memory ctHashes = CFT.zkVerifier().zkVerifyCalcCtHashesPacked(
+        uint256[] memory ctHashes = FHT.zkVerifier().zkVerifyCalcCtHashesPacked(
             values,
             utypes,
             sender,
@@ -81,10 +81,10 @@ contract MockZkVerifierTests is Test {
             block.chainid
         );
 
-        CFT.zkVerifier().insertPackedCtHashes(ctHashes, values);
+        FHT.zkVerifier().insertPackedCtHashes(ctHashes, values);
 
         // Hash should be in storage
-        CFT.assertHashValue(ctHashes[0], 5);
-        CFT.assertHashValue(ctHashes[1], 6);
+        FHT.assertHashValue(ctHashes[0], 5);
+        FHT.assertHashValue(ctHashes[1], 6);
     }
 }

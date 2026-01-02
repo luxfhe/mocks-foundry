@@ -3,61 +3,61 @@ pragma solidity ^0.8.13;
 
 import {Test} from "forge-std/Test.sol";
 import {ExampleFHECounter} from "./ExampleFHECounter.sol";
-import {CoFheTest} from "../src/CoFheTest.sol";
-import "@luxfhe/cofhe-contracts/FHE.sol";
+import {FHETest} from "../src/FHETest.sol";
+import "@luxfi/contracts/fhe/FHE.sol";
 
 contract ExampleFHECounterTest is Test {
-    CoFheTest CFT;
+    FHETest FHT;
     address bob = makeAddr("bob");
 
     ExampleFHECounter public counter;
 
     function setUp() public {
-        CFT = new CoFheTest(false);
+        FHT = new FHETest(false);
 
         counter = new ExampleFHECounter();
 
         // Set number to 5
-        InEuint32 memory inNumber = CFT.createInEuint32(5, bob);
+        Euint32 memory inNumber = FHT.createEuint32(5, bob);
         vm.prank(bob);
         counter.setNumber(inNumber);
     }
 
     function test_setNumber() public {
-        InEuint32 memory inNumber = CFT.createInEuint32(10, bob);
+        Euint32 memory inNumber = FHT.createEuint32(10, bob);
         vm.prank(bob);
         counter.setNumber(inNumber);
-        CFT.assertHashValue(counter.eNumber(), 10);
+        FHT.assertHashValue(counter.eNumber(), 10);
     }
 
     function test_increment() public {
         counter.increment();
-        CFT.assertHashValue(counter.eNumber(), 6);
+        FHT.assertHashValue(counter.eNumber(), 6);
     }
 
     function test_add() public {
-        InEuint32 memory inNumber = CFT.createInEuint32(2, bob);
+        Euint32 memory inNumber = FHT.createEuint32(2, bob);
         vm.prank(bob);
         counter.add(inNumber);
-        CFT.assertHashValue(counter.eNumber(), 7);
+        FHT.assertHashValue(counter.eNumber(), 7);
     }
 
     function test_sub() public {
-        InEuint32 memory inNumber = CFT.createInEuint32(3, bob);
+        Euint32 memory inNumber = FHT.createEuint32(3, bob);
         vm.prank(bob);
         counter.sub(inNumber);
-        CFT.assertHashValue(counter.eNumber(), 2);
+        FHT.assertHashValue(counter.eNumber(), 2);
     }
 
     function test_mul() public {
-        InEuint32 memory inNumber = CFT.createInEuint32(2, bob);
+        Euint32 memory inNumber = FHT.createEuint32(2, bob);
         vm.prank(bob);
         counter.mul(inNumber);
-        CFT.assertHashValue(counter.eNumber(), 10);
+        FHT.assertHashValue(counter.eNumber(), 10);
     }
 
     function test_decrypt() public {
-        CFT.assertHashValue(counter.eNumber(), 5);
+        FHT.assertHashValue(counter.eNumber(), 5);
         counter.decrypt();
 
         uint8 count = 0;
@@ -73,7 +73,7 @@ contract ExampleFHECounterTest is Test {
     }
 
     function test_decryptSafe() public {
-        CFT.assertHashValue(counter.eNumber(), 5);
+        FHT.assertHashValue(counter.eNumber(), 5);
         counter.decrypt();
 
         uint8 count = 0;

@@ -4,13 +4,14 @@ pragma solidity >=0.8.25 <0.9.0;
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import {Ownable2StepUpgradeable} from "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol";
-import {taskManagerAddress} from "./addresses/TaskManagerAddress.sol";
+import {FHE_NETWORK_ADDRESS} from "./addresses/FHENetworkAddress.sol";
+import {TASK_MANAGER_ADDRESS} from "./addresses/TaskManagerAddress.sol";
 import {PermissionedUpgradeable, Permission} from "./Permissioned.sol";
 
 /**
  * @title  ACL
  * @notice The ACL (Access Control List) is a permission management system designed to
- *         control who can access, compute on, or decrypt encrypted values in cofhe.
+ *         control who can access, compute on, or decrypt encrypted values in luxfhe.
  *         By defining and enforcing these permissions, the ACL ensures that encrypted data remains secure while still being usable
  *         within authorized contexts.
  */
@@ -47,7 +48,7 @@ contract ACL is
         address indexed contractAddress
     );
 
-    /// @custom:storage-location erc7201:cofhe.storage.ACL
+    /// @custom:storage-location erc7201:luxfhe.storage.ACL
     struct ACLStorage {
         mapping(uint256 handle => bool isGlobal) globalHandles;
         mapping(uint256 handle => mapping(address account => bool isAllowed)) persistedAllowedPairs;
@@ -67,12 +68,12 @@ contract ACL is
     /// @notice Patch version of the contract.
     uint256 private constant PATCH_VERSION = 0;
 
-    /// @notice TaskManagerAddress address.
-    address public constant TASK_MANAGER_ADDRESS = taskManagerAddress;
+    /// @notice FHE Network address.
+    address public constant FHE_NETWORK = FHE_NETWORK_ADDRESS;
 
-    /// @dev keccak256(abi.encode(uint256(keccak256("cofhe.storage.ACL")) - 1)) & ~bytes32(uint256(0xff))
+    /// @dev keccak256(abi.encode(uint256(keccak256("luxfhe.storage.ACL")) - 1)) & ~bytes32(uint256(0xff))
     bytes32 private constant ACL_SLOT =
-        keccak256(abi.encode(uint256(keccak256("cofhe.storage.ACL")) - 1)) &
+        keccak256(abi.encode(uint256(keccak256("luxfhe.storage.ACL")) - 1)) &
             ~bytes32(uint256(0xff));
 
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -259,11 +260,11 @@ contract ACL is
     }
 
     /**
-     * @notice                     Getter function for the TaskManager contract address.
-     * @return taskManagerAddress  Address of the TaskManager.
+     * @notice                     Getter function for the FHE Network contract address.
+     * @return                     Address of the FHE Network.
      */
-    function getTaskManagerAddress() public view virtual returns (address) {
-        return TASK_MANAGER_ADDRESS;
+    function getFHENetworkAddress() public view virtual returns (address) {
+        return FHE_NETWORK;
     }
 
     /**

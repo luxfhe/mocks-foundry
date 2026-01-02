@@ -1,33 +1,33 @@
 import { task } from 'hardhat/config'
-import { MockZkVerifier, MockQueryDecrypter, TaskManager, ACL, Example } from '../typechain-types'
+import { MockZkVerifier, MockQueryDecrypter, MockNetwork, ACL, Example } from '../typechain-types'
 import { execSync } from 'child_process'
 import fs from 'fs/promises'
-import { anvilSetCode, TASK_MANAGER_ADDRESS, ZK_VERIFIER_ADDRESS, QUERY_DECRYPTER_ADDRESS, EXAMPLE_FHE_COUNTER_ADDRESS } from './utils'
+import { anvilSetCode, FHE_NETWORK_ADDRESS, ZK_VERIFIER_ADDRESS, QUERY_DECRYPTER_ADDRESS, EXAMPLE_FHE_COUNTER_ADDRESS } from './utils'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 
-const deployMockTaskManager = async (hre: HardhatRuntimeEnvironment) => {
+const deployMockNetwork = async (hre: HardhatRuntimeEnvironment) => {
 	const [signer] = await hre.ethers.getSigners()
 
-	console.log('Task Manager')
+	console.log('FHE Network')
 
-	// Deploy MockTaskManager
-	const tmBytecode = await fs.readFile('./out/MockTaskManager.sol/TaskManager.json', 'utf8')
-	const tmJson = JSON.parse(tmBytecode)
-	await anvilSetCode(TASK_MANAGER_ADDRESS, tmJson.deployedBytecode.object)
-	const taskManager: TaskManager = await hre.ethers.getContractAt('TaskManager', TASK_MANAGER_ADDRESS)
+	// Deploy MockNetwork
+	const networkBytecode = await fs.readFile('./out/MockNetwork.sol/MockNetwork.json', 'utf8')
+	const networkJson = JSON.parse(networkBytecode)
+	await anvilSetCode(FHE_NETWORK_ADDRESS, networkJson.deployedBytecode.object)
+	const mockNetwork: MockNetwork = await hre.ethers.getContractAt('MockNetwork', FHE_NETWORK_ADDRESS)
 	console.log('  - deployed')
 
-	// Initialize MockTaskManager
-	const initTx = await taskManager.initialize(signer.address)
+	// Initialize MockNetwork
+	const initTx = await mockNetwork.initialize(signer.address)
 	await initTx.wait()
 	console.log('  - initialized')
 
-	const tmExists = await taskManager.exists()
-	console.log('  - exists', tmExists ? 'yes' : 'no')
+	const networkExists = await mockNetwork.exists()
+	console.log('  - exists', networkExists ? 'yes' : 'no')
 
-	console.log('  - address:', await taskManager.getAddress())
+	console.log('  - address:', await mockNetwork.getAddress())
 
-	return taskManager
+	return mockNetwork
 }
 
 const deployMockACL = async (hre: HardhatRuntimeEnvironment) => {
@@ -88,7 +88,7 @@ const deployMockQueryDecrypter = async (hre: HardhatRuntimeEnvironment, acl: ACL
 	console.log('  - exists', queryDecrypterExists ? 'yes' : 'no')
 
 	// Initialize MockQueryDecrypter
-	const initTx = await queryDecrypter.initialize(TASK_MANAGER_ADDRESS, await acl.getAddress())
+	const initTx = await queryDecrypter.initialize(FHE_NETWORK_ADDRESS, await acl.getAddress())
 	await initTx.wait()
 	console.log('  - initialized')
 
@@ -111,10 +111,10 @@ const deployExampleFHECounter = async (hre: HardhatRuntimeEnvironment) => {
 	return example
 }
 
-const setTaskManagerACL = async (taskManager: TaskManager, acl: ACL) => {
-	const setAclTx = await taskManager.setACLContract(await acl.getAddress())
+const setNetworkACL = async (mockNetwork: MockNetwork, acl: ACL) => {
+	const setAclTx = await mockNetwork.setACLContract(await acl.getAddress())
 	await setAclTx.wait()
-	console.log('TaskManager ACL set')
+	console.log('FHE Network ACL set')
 }
 
 task('deploy-mocks-on-anvil', 'Runs a script on the Anvil network').setAction(async (taskArgs, hre) => {
@@ -129,11 +129,11 @@ task('deploy-mocks-on-anvil', 'Runs a script on the Anvil network').setAction(as
 	await hre.run('compile')
 	await execSync('forge compile')
 
-	const taskManager = await deployMockTaskManager(hre)
+	const mockNetwork = await deployMockNetwork(hre)
 	const acl = await deployMockACL(hre)
 
-	console.log('Task Manager Exists', await taskManager.getAddress(), await taskManager.exists())
-	await setTaskManagerACL(taskManager, acl)
+	console.log('FHE Network Exists', await mockNetwork.getAddress(), await mockNetwork.exists())
+	await setNetworkACL(mockNetwork, acl)
 	const zkVerifier = await deployMockZkVerifier(hre)
 	const queryDecrypter = await deployMockQueryDecrypter(hre, acl)
 

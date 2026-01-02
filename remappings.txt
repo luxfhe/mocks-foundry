@@ -2,3 +2,6 @@ forge-std/=node_modules/forge-std/src/
 @openzeppelin/contracts/=node_modules/@openzeppelin/contracts/
 @openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/
 @fhenixprotocol/cofhe-contracts/=node_modules/@fhenixprotocol/cofhe-contracts/
+@luxfhe/fhe-contracts/=../../packages/contracts/fhe/
+@luxfhe/luxfhe-contracts/=../../packages/contracts/fhe/
+@luxfi/contracts/fhe/=node_modules/@luxfi/contracts/fhe/

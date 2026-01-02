@@ -1,14 +1,14 @@
-# cofhe-foundry-mocks (DEPRECATED) [![NPM Package][npm-badge]][npm] [![License: MIT][license-badge]][license]
+# fhe-foundry-mocks (DEPRECATED) [![NPM Package][npm-badge]][npm] [![License: MIT][license-badge]][license]
 
 > [!CAUTION]
 > DEPRECATED
 > 
-> Use [cofhe-mock-contracts](https://github.com/LuxFHEProtocol/cofhe-mock-contracts) instead.
+> Use [fhe-mock-contracts](https://github.com/LuxFHEProtocol/fhe-mock-contracts) instead.
 
 ---------
 
-[npm]: https://www.npmjs.com/package/@luxfheprotocol/cofhe-foundry-mocks
-[npm-badge]: https://img.shields.io/npm/v/@luxfheprotocol/cofhe-foundry-mocks.svg
+[npm]: https://www.npmjs.com/package/@luxfheprotocol/fhe-foundry-mocks
+[npm-badge]: https://img.shields.io/npm/v/@luxfheprotocol/fhe-foundry-mocks.svg
 [license]: https://opensource.org/licenses/MIT
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
@@ -16,7 +16,7 @@ Utility contracts for locally testing FHE locally in foundry.
 
 Need help getting started? Check out the [luxfhe documentation](https://docs.luxfhe.io)!
 
-These contracts are still under heavy constructions and will be changing frequently. Consider binding your contracts to a specific version, and keep an eye on the [changelog](https://github.com/LuxFHEProtocol/cofhe-contracts/CHANGELOG.md)
+These contracts are still under heavy constructions and will be changing frequently. Consider binding your contracts to a specific version, and keep an eye on the [changelog](https://github.com/LuxFHEProtocol/fhe-contracts/CHANGELOG.md)
 
 ## Migration
 
@@ -25,23 +25,23 @@ v0.1.3 - Rename `assertStoredValue` to `assertHashValue`
 ## Install
 
 ```
-forge install luxfheprotocol/cofhe-foundry-mocks
+forge install luxfheprotocol/fhe-foundry-mocks
 ```
 
 add the following remapping:
 
 ```
-@luxfheprotocol/cofhe-foundry-mocks/=lib/cofhe-foundry-mocks/src/
+@luxfheprotocol/fhe-foundry-mocks/=lib/fhe-foundry-mocks/src/
 ```
 
 ## Usage
 
-Import `CoFheTest` from `@luxfhe-protocol/cofhe-foundry-mocks/CoFheTest.sol` and include it in your test file:
+Import `CoFheTest` from `@luxfhe-protocol/fhe-foundry-mocks/CoFheTest.sol` and include it in your test file:
 
 ```solidity
 
 import {Test} from "forge-std/Test.sol";
-import { CoFheTest } from "@luxfheprotocol/cofhe-foundry-mocks/CoFheTest.sol";
+import { CoFheTest } from "@luxfheprotocol/fhe-foundry-mocks/CoFheTest.sol";
 
 contract ExampleFHECounterTest is Test {
     CoFheTest CFT;

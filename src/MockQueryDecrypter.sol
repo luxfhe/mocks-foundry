@@ -5,20 +5,20 @@ pragma solidity >=0.8.19 <0.9.0;
 
 import {Permission} from "./Permissioned.sol";
 import {ACL} from "./ACL.sol";
-import {TaskManager} from "./MockTaskManager.sol";
-import {TASK_MANAGER_ADDRESS} from "@luxfhe/cofhe-contracts/FHE.sol";
+import {MockNetwork} from "./MockNetwork.sol";
+import {FHE_NETWORK_ADDRESS} from "./addresses/FHENetworkAddress.sol";
 import {PermissionedUpgradeable} from "./Permissioned.sol";
 
 contract MockQueryDecrypter {
-    TaskManager public taskManager;
+    MockNetwork public fheNetwork;
     ACL public acl;
 
     error NotAllowed();
     error SealingKeyMissing();
     error SealingKeyInvalid();
 
-    function initialize(address _taskManager, address _acl) public {
-        taskManager = TaskManager(_taskManager);
+    function initialize(address _fheNetwork, address _acl) public {
+        fheNetwork = MockNetwork(_fheNetwork);
         acl = ACL(_acl);
     }
 
@@ -52,7 +52,7 @@ contract MockQueryDecrypter {
 
         if (!isAllowed) return (false, "NotAllowed", 0);
 
-        return (true, "", taskManager.mockStorage(ctHash));
+        return (true, "", fheNetwork.mockStorage(ctHash));
     }
 
     function seal(uint256 input, bytes32 key) public pure returns (bytes32) {
@@ -83,7 +83,7 @@ contract MockQueryDecrypter {
 
         if (!isAllowed) return (false, "NotAllowed", 0);
 
-        uint256 value = taskManager.mockStorage(ctHash);
+        uint256 value = fheNetwork.mockStorage(ctHash);
         return (true, "", value);
     }
 
@@ -111,7 +111,7 @@ contract MockQueryDecrypter {
 
         if (!isAllowed) return (false, "NotAllowed", bytes32(0));
 
-        uint256 value = taskManager.mockStorage(ctHash);
+        uint256 value = fheNetwork.mockStorage(ctHash);
         return (true, "", seal(value, permission.sealingKey));
     }
 

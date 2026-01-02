@@ -1,10 +1,10 @@
 {
-	"name": "@luxfhe/cofhe-foundry-mocks",
-	"description": "Utility contracts for locally testing CoFHE with FHE primitives locally in foundry.",
-	"version": "0.1.3",
+	"name": "@luxfhe/mock-contracts",
+	"description": "Utility contracts for locally testing LuxFHE with FHE primitives in foundry.",
+	"version": "0.5.0",
 	"author": {
-		"name": "luxfheProtocol",
-		"url": "https://github.com/luxfheProtocol/cofhe-foundry-mocks"
+		"name": "Lux Industries Inc",
+		"url": "https://luxfhe.io"
 	},
 	"scripts": {
 		"test": "forge test -vvv",
@@ -23,12 +23,11 @@
 		"ethereum",
 		"smart-contracts",
 		"solidity",
-		"FHE",
+		"fhe",
+		"tfhe",
 		"encryption",
 		"privacy",
-		"coprocessor",
-		"luxfhe",
-		"cofhe"
+		"luxfhe"
 	],
 	"publishConfig": {
 		"access": "public"
@@ -36,7 +35,7 @@
 	"dependencies": {
 		"@openzeppelin/contracts": "^5.0.0",
 		"@openzeppelin/contracts-upgradeable": "^5.0.0",
-		"@luxfhe/cofhe-contracts": "0.0.13",
+		"@luxfhe/contracts": "^1.1.0",
 		"forge-std": "github:foundry-rs/forge-std"
 	},
 	"devDependencies": {
