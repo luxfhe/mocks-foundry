@@ -16,7 +16,7 @@ contract SimpleDecrypter {
     }
 
     function getDecryptResult(uint256 ctHash) public view returns (uint256) {
-        return FHE.getDecryptResult(ctHash);
+        return FHE.reveal(ctHash);
     }
 }
 

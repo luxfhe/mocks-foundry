@@ -57,12 +57,12 @@ contract Example {
     }
 
     function getDecryptResult(euint32 input1) public view returns (uint32) {
-        return FHE.getDecryptResult(input1);
+        return FHE.reveal(input1);
     }
 
     function getDecryptResultSafe(
         euint32 input1
     ) public view returns (uint32 value, bool decrypted) {
-        return FHE.getDecryptResultSafe(input1);
+        return FHE.revealSafe(input1);
     }
 }
